@@ -1,0 +1,50 @@
+"use strict";
+const apiRoutes = require("../../../middlewares/apiRoutes");
+const path = require("path");
+const bannerRoute = require("./banner");
+const categoryRoute = require("./category");
+const subCategoryRoute = require("./subCategory");
+const medicineRoute = require("./medicine");
+const cartRoute = require("./cart");
+const paymentRoute = require("./payment");
+const orderRoute = require("./order");
+const addressRoute = require("./address");
+const invoiceRoute = require("./invoice");
+const dashboardRoute = require("./dashboard");
+const ratingRoute = require("./rating");
+const companyRoute = require("./company");
+const membershipRoute = require("./membership");
+const productRoute = require("./product");
+const emailRoute = require("./email");
+const pubSubRoute = require("./pubSub");
+const hsnNumberRoute = require("./hsnNumber");
+const notificationRoute = require("./notification");
+const offerRoute = require("./offer");
+const dispatchRoute = require("./dispatch");
+
+module.exports.configure = (app, endpoints) => {
+  const root = path.normalize(__dirname + "./../");
+  let api = apiRoutes(root, app);
+  api.model(productRoute.apiType).register(productRoute.routes);
+  api.model(bannerRoute.apiType).register(bannerRoute.routes);
+  api.model(membershipRoute.apiType).register(membershipRoute.routes);
+  api.model(categoryRoute.apiType).register(categoryRoute.routes);
+  api.model(subCategoryRoute.apiType).register(subCategoryRoute.routes);
+  api.model(medicineRoute.apiType).register(medicineRoute.routes);
+  api.model(cartRoute.apiType).register(cartRoute.routes);
+  api.model(paymentRoute.apiType).register(paymentRoute.routes);
+  api.model(orderRoute.apiType).register(orderRoute.routes);
+  api.model(addressRoute.apiType).register(addressRoute.routes);
+  api.model(invoiceRoute.apiType).register(invoiceRoute.routes);
+  api.model(dashboardRoute.apiType).register(dashboardRoute.routes);
+  api.model(ratingRoute.apiType).register(ratingRoute.routes);
+  api.model(companyRoute.apiType).register(companyRoute.routes);
+  api.model(emailRoute.apiType).register(emailRoute.routes);
+  api.model(pubSubRoute.apiType).register(pubSubRoute.routes);
+  api.model(hsnNumberRoute.apiType).register(hsnNumberRoute.routes);
+  api.model(notificationRoute.apiType).register(notificationRoute.routes); 
+  api.model(offerRoute.apiType).register(offerRoute.routes);
+  api.model(dispatchRoute.apiType).register(dispatchRoute.routes);
+
+
+};

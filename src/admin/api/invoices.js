@@ -1,0 +1,39 @@
+"use strict";
+const path = require("path");
+const coreDirname = path.join(
+    __dirname,
+    "..",
+    "..",
+    "core",
+    "api",
+   
+  );
+  const base = require("../../../api/api-base")(__dirname, 'invoice', "invoice", coreDirname);
+const httpStatus = require("http-status");
+const constants = require("../../../constants");
+const service = require('../services/invoice')
+
+exports.create = async (req, res) => {
+    let retVal = await base.create(req);
+    return res.data(retVal);
+};
+
+exports.update = async (req, res) => {
+    let retVal = await base.update(req);
+    return res.data(retVal);
+};
+
+exports.search = async (req, res) => {
+    let retVal = await base.search(req);
+    return res.page(retVal);
+};
+
+exports.get = async (req, res) => {
+    let retVal = await base.get(req);
+    return res.data(retVal);
+};
+
+exports.delete = async (req, res) => {
+    let retVal = await base.delete(req);
+    return res.success(retVal);
+};

@@ -1,0 +1,37 @@
+{
+  "env": "release",
+  "mongodb": {
+    "database": "care_simply",
+    "host": "mongodb://recap:recap345@srv447299.hstgr.cloud:27017/recapp_db?directConnection=true&serverSelectionTimeoutMS=2000&authSource=admin&appName=mongosh+2.1.0"
+  },
+  "webServer": {
+    "baseUrl": "https://api.lookapp.app",
+    "port": 3000
+  },
+  "auth": {
+    "sessionType": "multiple",
+    "secret": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+    "refreshSecret": "UHVJhbjhbvfeHbbJKcndKJbBKkbkjbBKBbkb",
+    "tokenPeriod": 300000,
+    "refreshPeriod": 30
+  },
+  "fcm": {
+    "serverKey": "AAAA_W8tLGo:APA91bFtuoorfy0I98xJYQGKgNDE25J2ygb-GBPzfNQ-1aoT5r5MOL6Nw2wjQ3204N6WHz5qJxDGme_M1fBD7PHChYnpXOErxp8wBBf_sv7LW9w8_yLUFuyzs0VwmSYFidHE20U-3QDw",
+    "url": "https://fcm.googleapis.com/fcm/send"
+  },
+  "stripe": {
+    "secretKey": "",
+    "publishKey": ""
+  },
+  "sendGrid": {
+    "key": "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"
+  },
+  "logger": {
+    "console": {
+      "level": "debug",
+      "handleExceptions": true,
+      "json": false,
+      "colorize": true
+    }
+  }
+}

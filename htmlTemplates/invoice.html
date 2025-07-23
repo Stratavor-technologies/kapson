@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Invoice</title>
+  </head>
+  <body class="bg-gray-100 p-10">
+    <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Invoice</h1>
+        <div class="bg-green-500 text-white rounded-full p-2">✓</div>
+      </div>
+      <div class="flex gap-4 my-6">
+        <p class="font-bold">Invoice Number</p>
+        <p>UXERFLOW-INV001</p>
+      </div>
+      <div class="border rounded-lg">
+        <div class="mt-4 grid gap-6 sm:grid-cols-2 p-3">
+          <div class="">
+            <h2 >Billed to</h2>
+            <p class="font-bold">Acme Enterprise</p>
+            <p class="font-bold">Acme@enterprise.com</p>
+          </div>
+
+          <div>
+            <p>Due date</p>
+            <p  class="font-bold">27 August 2024</p>
+          </div>
+        </div>
+
+        <div class=" mt-4 border-t p-3">
+          <h2>Address</h2>
+          <address  class="font-bold not-italic">1901 Thornridge Cir. Shiloh, Hawaii, USA. 81063</address>
+        </div>
+      </div>
+      <div class=" overflow-x-auto ">
+        <table class="min-w-full my-8 border-collapse border-gray-200 rounded-lg bg-red-400 "
+        >
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-200 p-2 text-left">Items</th>
+              <th class="border border-gray-200 p-2 text-left text-center">QTY</th>
+              <th class="border border-gray-200 p-2 text-left text-center">Rate</th>
+              <th class="border border-gray-200 p-2 text-left text-center">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr">
+              <td class="border border-gray-200 p-2">Web Design</td>
+              <td class="border border-gray-200 p-2 text-center">2</td>
+              <td class="border border-gray-200 p-2 text-center">$500</td>
+              <td class="border border-gray-200 p-2 text-center">$1,000</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2">Rebranding</td>
+              <td class="border border-gray-200 p-2 text-center">1</td>
+              <td class="border border-gray-200 p-2 text-center">$500</td>
+              <td class="border border-gray-200 p-2 text-center">$500</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-200 p-2">Marketing SEO</td>
+              <td class="border border-gray-200 p-2 text-center">1</td>
+              <td class="border border-gray-200 p-2 text-center">$500</td>
+              <td class="border border-gray-200 p-2 text-center">$500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-6 subtotal flex sm:justify-end ">
+        <div class="w-full sm:w-1/2 shadow-lg p-3 sm:p-5 rounded-lg">
+            <div class="flex justify-between">
+                <span class="font-bold">Subtotal</span>
+                <span>$2,000</span>
+              </div>
+      
+              <div class="flex justify-between border-t mt-4 pt-2 font-bold">
+                <span>Total</span>
+                <span>$2,000</span>
+              </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

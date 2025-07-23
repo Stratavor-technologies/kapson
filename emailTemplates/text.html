@@ -1,0 +1,95 @@
+Example HTML template
+<html>
+  <head>
+    <title>Email Template</title>
+  </head>
+  <body>
+    <p>This is your email content.</p>
+    <button id="deleteButton">Delete Data</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      document
+        .getElementById("deleteButton")
+        .addEventListener("click", async function (event) {
+          try {
+            // Make API call to delete data using Axios and async/await
+            const response = await axios.delete(
+              "http://recapp.codingcopz.in/api/reports/6577f183f97e5231642533f2"
+            );
+            // Handle delete API response data
+            console.log("Data deleted:", response.data);
+          } catch (error) {
+            // Handle errors
+            console.error("Error:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
+
+<!-- <html>
+  <head>
+    <title>Email Template</title>
+  </head>
+  <body>
+    <p>This is your email content.</p>
+    <button id="deleteButton">Delete Data</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // Your JavaScript code will go here
+
+      function callApi() {
+        // Make API call using Axios and async/await
+        axios
+          .get(
+            "http://recapp.codingcopz.in/api/reports/6577f183f97e5231642533f2"
+          )
+          .then((response) => {
+            // Handle API response data
+            console.log(response.data);
+          })
+          .catch((error) => {
+            // Handle errors
+            console.error("Error:", error);
+          });
+      }
+
+      function deleteData() {
+        // Make API call to delete data using Axios and async/await
+        axios
+          .delete(
+            "http://recapp.codingcopz.in/api/reports/6577f183f97e5231642533f2"
+          )
+          .then((response) => {
+            // Handle delete API response data
+            console.log("Data deleted:", response.data);
+          })
+          .catch((error) => {
+            // Handle errors
+            console.error("Error:", error);
+          });
+      }
+
+      document
+        .getElementById("deleteButton")
+        .addEventListener("click", function (event) {
+          deleteData();
+        });
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
